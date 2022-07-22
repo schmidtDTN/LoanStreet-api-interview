@@ -8,7 +8,7 @@ def get_db_connection():
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     return conn
 
-app = Flask(__name__)
+loanstreet_api = Flask(__name__)
 # TODOs: 
 # OpenAPI doc
 # Client (Rust + TUI?)
