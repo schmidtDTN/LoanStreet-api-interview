@@ -1,1 +1,1 @@
-web: gunicorn app:loanstreet_api
+web: gunicorn app:app
