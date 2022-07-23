@@ -47,7 +47,7 @@ def create_loan():
     except:
         return "Failed to insert loan into database", 500
 
-    return "Successfully added loan " + str(new_loan_id), 200
+    return str(new_loan_id), 200
     
 # Retrieve all loans - not requested in the spec, but added this in to have an easy way to view all existing loans
 @app.route('/api/loans', methods=["GET"])
@@ -134,7 +134,7 @@ def update_loan(id):
         cur.close()
         conn.close()
     except:
-        return "Failed to update loan in the database", 500
+        return str(id), 500
 
     # Make sure you can't accidentally blow something up
     return "Successfully updated loan", 200

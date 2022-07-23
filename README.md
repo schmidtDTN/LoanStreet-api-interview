@@ -44,7 +44,7 @@ This endpoint allows a user to update an existing loan in the database by ID. Th
 It expects a JSON body, as detailed in the [Data Expectations](#data-expectations) section. Currently, the API does not allow for partial updating of a loan; i.e. all fields must be provided in the request body.
 If a field is not provided, a 400 error will be returned; if an error occurs while writing to the database, a 500 will be returned.
 If the requested ID does not exist in the database, a 404 is returned. If an issue occurs while retrieving the data from the database, a 500 will be returned.
-If all goes well, a 200 is returned, along with a message stating that the loan was successfully updated.
+If all goes well, a 200 is returned, along with a message containing the loan's ID.
 
 ## Data Expectations
 
